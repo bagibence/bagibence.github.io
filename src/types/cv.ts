@@ -3,6 +3,7 @@ export interface Experience {
   time: string;
   title: string;
   location?: string;
+  highlights?: string[];
   description?: string;
 }
 
@@ -11,6 +12,10 @@ export interface Education {
   time: string;
   degree: string;
   location?: string;
+  grade?: string;
+  project?: string;
+  supervisor?: string;
+  highlights?: string[];
   description?: string;
 }
 

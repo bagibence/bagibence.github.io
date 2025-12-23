@@ -4,8 +4,10 @@ export const experiences = [
 		time: 'Feb 2025 - present',
 		title: 'Data Engineer, Research Software Engineer',
 		location: 'Berlin',
-		description:
-			'Highlights: Simons Foundation - migrated NeMoS optimization backend from JAXopt to Optimistix/Optax, designed a unified solver interface, implemented JAX zoom linesearch in Optimistix. BuildingMinds - data migration and processing pipelines (dbt) for sustainability calculations.',
+		highlights: [
+			'Simons Foundation: migrated NeMoS optimization backend from JAXopt to Optimistix/Optax, designed a unified solver interface, implemented JAX zoom linesearch in Optimistix.',
+			'BuildingMinds: data migration and processing pipelines (dbt) for sustainability calculations.',
+		],
 	},
 	{
 		company: 'NeuroRSE Group, Flatiron Institute Center for Computational Neuroscience',
@@ -39,23 +41,35 @@ export const education = [
 		time: 'Oct 2020 - Mar 2025',
 		degree: 'PhD, Computational Neuroscience',
 		location: 'London',
-		description:
-			'Project: Neural correlates of movement planning under uncertainty. Supervisor: Dr. Juan Alvaro Gallego. Highlights: analyzed neural population recordings; built Python and Julia libraries for trial-based neural data; prototyped modular RNNs.',
+		project: 'Project: Neural correlates of movement planning under uncertainty',
+		supervisor: 'Dr. Juan Alvaro Gallego',
+		highlights: [
+			'Analyzed neural population recordings to understand movement under uncertainty.',
+			'Built Python and Julia libraries for trial-based neural data analysis.',
+			'Prototyped modular RNNs for experimental workflows.',
+		],
 	},
 	{
 		school: 'Bernstein Center for Computational Neuroscience',
 		time: 'Oct 2017 - Sep 2020',
 		degree: 'MSc, Computational Neuroscience',
 		location: 'Berlin',
-		description:
-			'Grade: 1.0 (best possible in the German system). Master project: Unsupervised discovery of discrete neural states in rats playing hide and seek. Supervisors: Prof. Dr. Michael Brecht, Dr. Juan Ignacio Sanguinetti-Scheck. Highlights: organized data into a public SQL database; used switching LDS/HMM models; validated results with statistical analysis and supervised decoding.',
+		grade: 'Grade: 1.0 (best possible in the German system)',
+		project:
+			'Master project: Unsupervised discovery of discrete neural states in rats playing hide and seek',
+		supervisor: 'Prof. Dr. Michael Brecht, Dr. Juan Ignacio Sanguinetti-Scheck',
+		highlights: [
+			'Organized experimental data into a public SQL database.',
+			'Used switching LDS/HMM models to study prefrontal cortex activity.',
+			'Validated results with statistical analysis and supervised decoding.',
+		],
 	},
 	{
 		school: 'PPCU, Faculty of Information Technology and Bionics',
 		time: 'Sep 2013 - Jan 2017',
 		degree: 'BSc, Molecular Bionics Engineering',
 		location: 'Budapest',
-		description: 'Grade: honours degree.',
+		grade: 'Grade: honours degree',
 	},
 ];
 
