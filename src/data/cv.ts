@@ -1,3 +1,4 @@
+// TODO: Update these to match my actual cv with better descriptions
 export const experiences = [
 	{
 		company: 'Freelance',
@@ -15,7 +16,7 @@ export const experiences = [
 		title: 'Research Software Engineer Intern',
 		location: 'New York',
 		description:
-			'Contributed to <a href="https://github.com/flatironinstitute/nemos">NeMoS</a>: improved model selection integration with scikit-learn and implemented SVRG for faster fitting on large datasets.',
+			'Contributed to <a href="https://github.com/flatironinstitute/nemos">NeMoS</a>, a Python package for statistical models for neuroscience: <ul><li>Streamlined model selection by improving integration with scikit-learn.</li><li>Implemented the variance-reduced stochastic optimization method SVRG to speed up fitting models to large datasets.</li></ul>',
 	},
 	{
 		company: 'Be.Neuro Lab',
@@ -23,7 +24,7 @@ export const experiences = [
 		title: 'Research Software Engineer',
 		location: 'London',
 		description:
-			'Kickstarted a <a href="https://github.com/BeNeuroLab/beneuro_experimental_data_organization">data processing pipeline and CLI tool</a> for handling experimental data.',
+			'Kickstarted the development of a <a href="https://github.com/BeNeuroLab/beneuro_experimental_data_organization">data processing pipeline and CLI tool</a> for handling experimental data recorded in the <a href="https://beneuro.ic.ac.uk">Be.Neuro Lab.</a>',
 	},
 	{
 		company: 'Freelance for OptioPay GmbH',
@@ -31,7 +32,7 @@ export const experiences = [
 		title: 'Data Scientist',
 		location: '',
 		description:
-			'Analyzed financial transactions and improved business logic; gained experience with Go, CI/CD, and microservice architectures.',
+			'Analyzed financial transactions and improved business logic using the insights gained; gained experience with Go, CI/CD, and microservice architectures.',
 	},
 ];
 
@@ -44,9 +45,8 @@ export const education = [
 		project: 'Project: Neural correlates of movement planning under uncertainty',
 		supervisor: 'Dr. Juan Alvaro Gallego',
 		highlights: [
-			'Analyzed neural population recordings to understand movement under uncertainty.',
-			'Built lightweight <a href="https://github.com/NeuralAnalysis/PyalData">Python</a> and <a href="https://github.com/bagibence/TrialData.jl">Julia</a> libraries for trial-based neural data analysis.',
-			'Prototyped <a href="https://github.com/beneurolab/modular_rnn">modular RNNs</a> for experimental workflows.',
+			'Analyzed neural population recordings, making use of unsupervised-, supervised-, and reinforcement learning, to understand how the coordinated activity of populations of neurons in the brain gives rise to movement under uncertainty.',
+			'Built lightweight <a href="https://github.com/NeuralAnalysis/PyalData">Python</a> and <a href="https://github.com/bagibence/TrialData.jl">Julia</a> libraries for trial-based neural data analysis, and one for <a href="https://github.com/beneurolab/modular_rnn">prototyping modular RNNs</a>.',
 		],
 	},
 	{
@@ -59,9 +59,10 @@ export const education = [
 			'Master project: Unsupervised discovery of discrete neural states in rats playing hide and seek',
 		supervisor: 'Prof. Dr. Michael Brecht, Dr. Juan Ignacio Sanguinetti-Scheck',
 		highlights: [
-			'Organized experimental data into a public <a href="https://gin.g-node.org/bagibence/hidenseek_hmm">SQL database</a>.',
-			'<a href="https://github.com/bagibence/hidenseek_hmm">Used switching LDS/HMM models</a> to study prefrontal cortex activity.',
-			'Validated results with statistical analysis and supervised decoding.',
+      'Organized experimental data into a publicly available <a href="https://gin.g-node.org/bagibence/hidenseek_hmm">SQL database</a>.',
+      '<a href="https://github.com/bagibence/hidenseek_hmm">Used state-space models</a> (switching linear dynamical systems and hidden Markov models) to study neural activity in prefrontal cortex of rats playing hide-and-seek.',
+      'Showed that the models segment brain activity into meaningful states related to the rats\' behavior in an unsupervised way, and validated my results using statistical analysis and supervised decoding of behavior from neural activity.',
+      'Demonstrated a novel bottom-up method for discovering what behaviors elicit changes in neural activity.',
 		],
 	},
 	{
