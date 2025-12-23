@@ -89,22 +89,33 @@ export const publications = [
 	{
 		title:
 			'Unsupervised discovery of behaviorally relevant brain states in rats playing hide-and-seek',
-		authors: 'Bagi, M. Brecht, J.I. Sanguinetti-Scheck',
+		authors: 'B. Bagi, M. Brecht, J.I. Sanguinetti-Scheck',
 		journal: 'Current Biology',
 		time: '2022',
 		link: 'https://www.cell.com/current-biology/fulltext/S0960-9822(22)00704-7',
 		abstract:
-			'Unsupervised discovery of behaviorally relevant brain states in rats playing hide-and-seek.',
+      '',
+		resources: [
+			{
+				label: 'Data',
+				url: 'https://gin.g-node.org/bagibence/hidenseek_hmm',
+			},
+			{
+				label: 'Code generating the figures',
+				url: 'https://github.com/bagibence/hidenseek_hmm',
+			},
+		],
 	},
 	{
 		title:
 			'Hippocampal sharp wave-ripples and the associated sequence replay emerge from structured synaptic interactions in a network model of area CA3',
 		authors:
-			'Ecker, Bagi, Vertes, Steinbach-Nemeth, Karlocai, Papp, Miklos, Hajos, Freund, Gulyas, Kali',
+			// 'András Ecker, Bence Bagi, Eszter Vértes, Orsolya Steinbach-Németh, Maria Rita Karlocai, Orsolya I. Papp, István Miklós, Norbert Hájos, Tamás Freund, Attila I. Gulyás, Szabolcs Káli',
+			'A. Ecker, B. Bagi, E. Vértes, O. Steinbach-Németh, M. R. Karlocai, O. I. Papp, I. Miklós, N. Hájos, T. Freund, A. I. Gulyás, Sz. Káli',
 		journal: 'eLife',
 		time: '2022',
 		link: 'https://elifesciences.org/articles/71850v1',
 		abstract:
-			'Hippocampal sharp wave-ripples and sequence replay emerge from structured synaptic interactions in a network model of area CA3.',
+			'',
 	},
 ];

@@ -35,6 +35,25 @@ const { elements } = Astro.props
         {element.time}
       </p>
       <p>{element.abstract}</p>
+      {element.resources?.length ? (
+        <p class='text-sm mt-2'>
+          <span class='font-medium'>Resources:</span>{' '}
+          {element.resources.map((resource, resourceIndex) => (
+            <>
+              <a
+                href={resource.url}
+                class='hover:text-accent transition-colors duration-200'
+                target='_blank'
+              >
+                {resource.label}
+              </a>
+              {resourceIndex < element.resources.length - 1 && (
+                <span> • </span>
+              )}
+            </>
+          ))}
+        </p>
+      ) : null}
       </>
     }
     {/* Uncomment this line to add a small border bottom for each element

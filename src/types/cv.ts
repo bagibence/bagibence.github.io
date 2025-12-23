@@ -31,6 +31,10 @@ export interface Publication {
   time: string;
   link?: string;
   abstract?: string;
+  resources?: {
+    label: string;
+    url: string;
+  }[];
 }
 
 export function isExperience(element: Experience | Education): element is Experience {
