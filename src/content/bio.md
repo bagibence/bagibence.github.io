@@ -1,4 +1,8 @@
-I'm a research software engineer, computational neuroscientist, and data scientist based in Berlin, Germany.
+I'm a freelance research software engineer, computational neuroscientist, and data scientist based in Berlin, Germany.
+<br>
+I believe (neuro)science needs easy-to-use and reliable software tools.
+<br>
+Feel free to contact me if your lab needs help with data processing and analysis pipelines!
 
 I recently defended my PhD at Imperial College London where I worked with [Juan Álvaro Gallego](https://beneuro.ic.ac.uk), and used data analysis and computational modeling to investigate how neural populations give rise to movement under uncertainty.
 
