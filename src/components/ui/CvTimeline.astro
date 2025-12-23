@@ -67,7 +67,7 @@ const { elements, colored } = Astro.props
 							{element.grade && <div class='text-sm text-neutral-500'>{element.grade}</div>}
 							{element.project && <div class='text-base'>{element.project}</div>}
 							{element.supervisor && (
-								<div class='text-base text-neutral-600'>Supervisor: {element.supervisor}</div>
+								<div class='text-base'>Supervisor: {element.supervisor}</div>
 							)}
 							{element.highlights && element.highlights.length > 0 && (
 								<ul class='mt-2 list-disc pl-5 text-base'>
