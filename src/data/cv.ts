@@ -70,6 +70,7 @@ export const education = [
 		degree: 'BSc, Molecular Bionics Engineering',
 		location: 'Budapest',
 		grade: 'Grade: honours degree',
+    description: 'Multidisciplinary engineering program spanning life sciences, mathematics, and programming.',
 	},
 ];
 
