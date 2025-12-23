@@ -5,8 +5,8 @@ export const experiences = [
 		title: 'Data Engineer, Research Software Engineer',
 		location: 'Berlin',
 		highlights: [
-			'Simons Foundation: migrated NeMoS optimization backend from JAXopt to Optimistix/Optax, designed a unified solver interface, implemented JAX zoom linesearch in Optimistix.',
-			'BuildingMinds: data migration and processing pipelines (dbt) for sustainability calculations.',
+			'<strong>Simons Foundation</strong>: migrated NeMoS optimization backend from JAXopt to Optimistix/Optax, designed a unified solver interface, implemented JAX zoom linesearch in Optimistix.',
+			'<strong>BuildingMinds</strong>: data migration and processing pipelines (dbt) for sustainability calculations.',
 		],
 	},
 	{
