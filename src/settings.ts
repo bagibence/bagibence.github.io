@@ -1,8 +1,8 @@
 export const profile = {
-	fullName: 'Your Name',
+	fullName: 'Bence Bagi',
 	title: '',
 	institute: '',
-	author_name: '', // Author name to be highlighted in the papers section
+	author_name: 'Bagi', // Author name to be highlighted in the papers section
 	research_areas: [
 		// { title: 'Physics', description: 'Brief description of the research interest', field: 'physics' },
 	],
@@ -11,12 +11,12 @@ export const profile = {
 // Set equal to an empty string to hide the icon that you don't want to display
 export const social = {
 	email: '',
-	linkedin: '',
-	x: 'https://www.x.com/',
+	linkedin: 'https://www.linkedin.com/in/bence-bagi-99b495257',
+	x: '',
 	bluesky: '',
-	github: '',
+	github: 'https://github.com/bagibence',
 	gitlab: '',
-	scholar: '',
+	scholar: 'https://scholar.google.com/citations?user=k5XkYVsAAAAJ&hl=en',
 	inspire: '',
 	arxiv: '',
 	orcid: '',
@@ -34,7 +34,7 @@ export const template = {
 }
 
 export const seo = {
-	default_title: 'Astro Academia',
-	default_description: 'Astro Academia is a template for academic websites.',
+	default_title: 'Bence Bagi',
+	default_description: 'Research software engineer and computational neuroscientist',
 	default_image: '/images/astro-academia.png',
 }
