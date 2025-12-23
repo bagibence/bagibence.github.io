@@ -10,7 +10,7 @@ interface Props {
 const { elements, colored } = Astro.props
 ---
 
-<ul class='timeline timeline-snap-icon timeline-compact timeline-vertical'>
+<ul class='timeline timeline-snap-icon timeline-compact timeline-vertical cv-timeline'>
 	{
 		elements.map((element, index) => (
 			<li>
@@ -58,7 +58,7 @@ const { elements, colored } = Astro.props
 								</ul>
 							) : (
 								<>
-									{element.description && <div>{element.description}</div>}
+									{element.description && <div set:html={element.description} />}
 								</>
 							)}
 						</>
@@ -76,7 +76,7 @@ const { elements, colored } = Astro.props
 									))}
 								</ul>
 							)}
-							{element.description && <div>{element.description}</div>}
+							{element.description && <div set:html={element.description} />}
 						</>
 					)}
 				</div>

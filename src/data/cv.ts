@@ -5,7 +5,7 @@ export const experiences = [
 		title: 'Data Engineer, Research Software Engineer',
 		location: 'Berlin',
 		highlights: [
-			'<strong>Simons Foundation</strong>: migrated NeMoS optimization backend from JAXopt to Optimistix/Optax, designed a unified solver interface, implemented JAX zoom linesearch in Optimistix.',
+			'<strong>Simons Foundation</strong>: migrated the optimization backend of <a href="https://github.com/flatironinstitute/nemos/">NeMoS</a> from JAXopt to Optimistix/Optax; <a href="https://github.com/flatironinstitute/nemos/pull/365">designed a unified solver interface</a> and <a href="https://github.com/patrick-kidger/optimistix/pull/177">implemented JAX zoom linesearch</a> in Optimistix.',
 			'<strong>BuildingMinds</strong>: data migration and processing pipelines (dbt) for sustainability calculations.',
 		],
 	},
@@ -15,7 +15,7 @@ export const experiences = [
 		title: 'Research Software Engineer Intern',
 		location: 'New York',
 		description:
-			'Contributed to NeMoS: improved model selection integration with scikit-learn and implemented SVRG for faster fitting on large datasets.',
+			'Contributed to <a href="https://github.com/flatironinstitute/nemos">NeMoS</a>: improved model selection integration with scikit-learn and implemented SVRG for faster fitting on large datasets.',
 	},
 	{
 		company: 'Be.Neuro Lab',
@@ -23,7 +23,7 @@ export const experiences = [
 		title: 'Research Software Engineer',
 		location: 'London',
 		description:
-			'Kickstarted a data processing pipeline and CLI tool for handling experimental data.',
+			'Kickstarted a <a href="https://github.com/BeNeuroLab/beneuro_experimental_data_organization">data processing pipeline and CLI tool</a> for handling experimental data.',
 	},
 	{
 		company: 'Freelance for OptioPay GmbH',
@@ -31,7 +31,7 @@ export const experiences = [
 		title: 'Data Scientist',
 		location: '',
 		description:
-			'Analyzed financial transactions and improved business logic; gained experience with Go, CI/CD, and microservice architecture.',
+			'Analyzed financial transactions and improved business logic; gained experience with Go, CI/CD, and microservice architectures.',
 	},
 ];
 
@@ -45,8 +45,8 @@ export const education = [
 		supervisor: 'Dr. Juan Alvaro Gallego',
 		highlights: [
 			'Analyzed neural population recordings to understand movement under uncertainty.',
-			'Built Python and Julia libraries for trial-based neural data analysis.',
-			'Prototyped modular RNNs for experimental workflows.',
+			'Built lightweight <a href="https://github.com/NeuralAnalysis/PyalData">Python</a> and <a href="https://github.com/bagibence/TrialData.jl">Julia</a> libraries for trial-based neural data analysis.',
+			'Prototyped <a href="https://github.com/beneurolab/modular_rnn">modular RNNs</a> for experimental workflows.',
 		],
 	},
 	{
@@ -59,8 +59,8 @@ export const education = [
 			'Master project: Unsupervised discovery of discrete neural states in rats playing hide and seek',
 		supervisor: 'Prof. Dr. Michael Brecht, Dr. Juan Ignacio Sanguinetti-Scheck',
 		highlights: [
-			'Organized experimental data into a public SQL database.',
-			'Used switching LDS/HMM models to study prefrontal cortex activity.',
+			'Organized experimental data into a public <a href="https://gin.g-node.org/bagibence/hidenseek_hmm">SQL database</a>.',
+			'<a href="https://github.com/bagibence/hidenseek_hmm">Used switching LDS/HMM models</a> to study prefrontal cortex activity.',
 			'Validated results with statistical analysis and supervised decoding.',
 		],
 	},
