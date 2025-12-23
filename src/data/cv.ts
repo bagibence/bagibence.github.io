@@ -5,7 +5,7 @@ export const experiences = [
 		title: 'Data Engineer, Research Software Engineer',
 		location: 'Berlin',
 		highlights: [
-			'<strong>Simons Foundation</strong>: migrated the optimization backend of <a href="https://github.com/flatironinstitute/nemos/">NeMoS</a> from JAXopt to Optimistix/Optax; <a href="https://github.com/flatironinstitute/nemos/pull/365">designed a unified solver interface</a> and <a href="https://github.com/patrick-kidger/optimistix/pull/177">implemented JAX zoom linesearch</a> in Optimistix.',
+			'<strong>Simons Foundation</strong>:<ul><li>migrated the optimization backend of <a href="https://github.com/flatironinstitute/nemos/">NeMoS</a> from JAXopt to Optimistix/Optax</li><li><a href="https://github.com/flatironinstitute/nemos/pull/365">designed a unified solver interface</a></li><li><a href="https://github.com/patrick-kidger/optimistix/pull/177">implemented JAX zoom linesearch</a> in Optimistix</li></ul>',
 			'<strong>BuildingMinds</strong>: data migration and processing pipelines (dbt) for sustainability calculations.',
 		],
 	},
