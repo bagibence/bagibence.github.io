@@ -8,6 +8,7 @@ import { template } from '@/settings'
 
 const isBlogPopulated = await getCollection('blog').then(collection => collection.length > 0)
 const showBlog = false;
+const showPapers = false;
 
 const {fullName, title} = profile
 ---
@@ -32,9 +33,11 @@ const {fullName, title} = profile
 					<li>
                         <a href={`${template.base}/research`} class='text-lg'>Research</a>
 					</li>
-					<li>
-                        <a href={`${template.base}/papers`} class='text-lg'>Papers</a>
-					</li>
+          {showPapers && 
+					  <li>
+                          <a href={`${template.base}/papers`} class='text-lg'>Papers</a>
+					  </li>
+          }
 					<li>
                         <a href={`${template.base}/cv`} class='text-lg'>CV</a>
                     </li>
