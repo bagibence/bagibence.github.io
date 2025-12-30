@@ -28,7 +28,11 @@ export const experiences = [
 		title: 'Research Software Engineer Intern',
 		location: 'New York',
 		description:
-			'Contributed to <a href="https://github.com/flatironinstitute/nemos">NeMoS</a>, a Python package for statistical models for neuroscience: <ul><li>Streamlined model selection by improving integration with scikit-learn.</li><li>Implemented the variance-reduced stochastic optimization method SVRG to speed up fitting models to large datasets.</li></ul>',
+			'Contributed to <a href="https://github.com/flatironinstitute/nemos">NeMoS</a>, a Python package for statistical models for neuroscience:',
+    highlights: [
+      '<a href="https://github.com/flatironinstitute/nemos/pull/169">Streamlined model selection by improving integration with scikit-learn.</a>',
+      '<a href="https://github.com/flatironinstitute/nemos/pull/184">Implemented SVRG, a variance-reduced stochastic optimization method, to speed up fitting models to large datasets.</a>',
+    ],
 	},
 	{
 		company: 'Be.Neuro Lab',
