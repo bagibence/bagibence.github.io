@@ -71,7 +71,7 @@ export const education = [
 		time: 'Oct 2017 - Sep 2020',
 		degree: 'MSc, Computational Neuroscience',
 		location: 'Berlin',
-		grade: 'Grade: 1.0 (best possible in the German system)',
+		// grade: 'Grade: 1.0 (best possible in the German system)',
 		project:
 			'Master project: Unsupervised discovery of discrete neural states in rats playing hide and seek',
 		supervisor: 'Prof. Dr. Michael Brecht, Dr. Juan Ignacio Sanguinetti-Scheck',
@@ -87,7 +87,7 @@ export const education = [
 		time: 'Sep 2013 - Jan 2017',
 		degree: 'BSc, Molecular Bionics Engineering',
 		location: 'Budapest',
-		grade: 'Grade: honours degree',
+		// grade: 'Grade: honours degree',
     description: 'Multidisciplinary engineering program spanning life sciences, mathematics, and programming.',
 	},
 ];
