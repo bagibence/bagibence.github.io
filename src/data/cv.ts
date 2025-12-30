@@ -1,4 +1,3 @@
-// TODO: Update these to match my actual cv with better descriptions
 export const experiences = [
 	{
 		company: 'Freelance for The Simons Foundation',
@@ -6,10 +5,12 @@ export const experiences = [
 		title: 'Research Software Engineer',
 		location: 'Berlin',
     description:
-			'Migrated the optimization backend of <a href="https://github.com/flatironinstitute/nemos/">NeMoS</a> from JAXopt to Optimistix/Optax',
+			'Migrated the optimization backend of <a href="https://github.com/flatironinstitute/nemos/">NeMoS</a> from JAXopt to Optimistix and Optax:',
 		highlights: [
-		    '<a href="https://github.com/flatironinstitute/nemos/pull/365">Designed a unified solver interface</a>',
-		    '<a href="https://github.com/patrick-kidger/optimistix/pull/177">Implemented JAX zoom linesearch</a> in Optimistix',
+		    '<a href="https://github.com/flatironinstitute/nemos/pull/365">Designed a unified solver interface and provided adapters for various solver backends.</a>',
+        '<a href="https://github.com/flatironinstitute/nemos/pull/444">Added support for objective functions with auxiliary variables.</a>',
+        '<a href="https://github.com/flatironinstitute/nemos/pull/411">Ported FISTA and Nesterov\'s accelerated gradient.</a>',
+		    '<a href="https://github.com/patrick-kidger/optimistix/pull/177">Implemented JAX zoom linesearch</a> in Optimistix.',
 		],
 	},
 	{
