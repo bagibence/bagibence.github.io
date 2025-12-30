@@ -34,10 +34,7 @@ const { elements, colored } = Astro.props;
                 {element.title}
                 <span class="text-base font-normal text-neutral-500">
                   {' | '}
-                  {element.company}
-                  {element.location && (
-                    <span class="text-neutral-400">{`, ${element.location}`}</span>
-                  )}
+                  {`${element.company}${element.location ? `, ${element.location}` : ''}`}
                 </span>
               </>
             ) : (
@@ -45,10 +42,7 @@ const { elements, colored } = Astro.props;
                 {element.degree}
                 <span class="text-base font-normal text-neutral-500">
                   {' | '}
-                  {element.school}
-                  {element.location && (
-                    <span class="text-neutral-400">{`, ${element.location}`}</span>
-                  )}
+                  {`${element.school}${element.location ? `, ${element.location}` : ''}`}
                 </span>
               </>
             )}
