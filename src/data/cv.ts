@@ -5,12 +5,12 @@ export const experiences = [
 		title: 'Research Software Engineer',
 		location: 'Berlin',
     description:
-			'Migrated the optimization backend of <a href="https://github.com/flatironinstitute/nemos/">NeMoS</a> from JAXopt to Optimistix and Optax:',
+			'Migrated the optimization backend of <a href="https://github.com/flatironinstitute/nemos/" target="_blank" rel="noopener noreferrer">NeMoS</a> from JAXopt to Optimistix and Optax:',
 		highlights: [
-		    '<a href="https://github.com/flatironinstitute/nemos/pull/365">Designed a unified solver interface and provided adapters for various solver backends.</a>',
-        '<a href="https://github.com/flatironinstitute/nemos/pull/444">Added support for objective functions with auxiliary variables.</a>',
-        '<a href="https://github.com/flatironinstitute/nemos/pull/411">Ported FISTA and Nesterov\'s accelerated gradient.</a>',
-		    '<a href="https://github.com/patrick-kidger/optimistix/pull/177">Implemented JAX zoom linesearch</a> in Optimistix.',
+		    '<a href="https://github.com/flatironinstitute/nemos/pull/365" target="_blank" rel="noopener noreferrer">Designed a unified solver interface and provided adapters for various solver backends.</a>',
+        '<a href="https://github.com/flatironinstitute/nemos/pull/444" target="_blank" rel="noopener noreferrer">Added support for objective functions with auxiliary variables.</a>',
+        '<a href="https://github.com/flatironinstitute/nemos/pull/411" target="_blank" rel="noopener noreferrer">Ported FISTA and Nesterov\'s accelerated gradient.</a>',
+		    '<a href="https://github.com/patrick-kidger/optimistix/pull/177" target="_blank" rel="noopener noreferrer">Implemented JAX zoom linesearch</a> in Optimistix.',
 		],
 	},
 	{
@@ -28,10 +28,10 @@ export const experiences = [
 		title: 'Research Software Engineer Intern',
 		location: 'New York',
 		description:
-			'Contributed to <a href="https://github.com/flatironinstitute/nemos">NeMoS</a>, a Python package for statistical models for neuroscience:',
+			'Contributed to <a href="https://github.com/flatironinstitute/nemos" target="_blank" rel="noopener noreferrer">NeMoS</a>, a Python package for statistical models for neuroscience:',
     highlights: [
-      '<a href="https://github.com/flatironinstitute/nemos/pull/169">Streamlined model selection by improving integration with scikit-learn.</a>',
-      '<a href="https://github.com/flatironinstitute/nemos/pull/184">Implemented SVRG, a variance-reduced stochastic optimization method, to speed up fitting models to large datasets.</a>',
+      '<a href="https://github.com/flatironinstitute/nemos/pull/169" target="_blank" rel="noopener noreferrer">Streamlined model selection by improving integration with scikit-learn.</a>',
+      '<a href="https://github.com/flatironinstitute/nemos/pull/184" target="_blank" rel="noopener noreferrer">Implemented SVRG, a variance-reduced stochastic optimization method, to speed up fitting models to large datasets.</a>',
     ],
 	},
 	{
@@ -40,7 +40,7 @@ export const experiences = [
 		title: 'Research Software Engineer',
 		location: 'London',
 		highlights: [
-			'Kickstarted the development of a <a href="https://github.com/BeNeuroLab/beneuro_experimental_data_organization">data processing pipeline and CLI tool</a> for handling experimental data recorded in the <a href="https://beneuro.ic.ac.uk">Be.Neuro Lab.</a>',
+			'Kickstarted the development of a <a href="https://github.com/BeNeuroLab/beneuro_experimental_data_organization" target="_blank" rel="noopener noreferrer">data processing pipeline and CLI tool</a> for handling experimental data recorded in the <a href="https://beneuro.ic.ac.uk" target="_blank" rel="noopener noreferrer">Be.Neuro Lab.</a>',
     ]
 	},
 	{
@@ -63,7 +63,7 @@ export const education = [
 		supervisor: 'Dr. Juan Alvaro Gallego',
 		highlights: [
 			'Analyzed neural population recordings, making use of unsupervised-, supervised-, and reinforcement learning, to understand how the coordinated activity of populations of neurons in the brain gives rise to movement under uncertainty.',
-			'Built lightweight <a href="https://github.com/NeuralAnalysis/PyalData">Python</a> and <a href="https://github.com/bagibence/TrialData.jl">Julia</a> libraries for trial-based neural data analysis, and one for <a href="https://github.com/beneurolab/modular_rnn">prototyping modular RNNs</a>.',
+			'Built lightweight <a href="https://github.com/NeuralAnalysis/PyalData" target="_blank" rel="noopener noreferrer">Python</a> and <a href="https://github.com/bagibence/TrialData.jl" target="_blank" rel="noopener noreferrer">Julia</a> libraries for trial-based neural data analysis, and one for <a href="https://github.com/beneurolab/modular_rnn" target="_blank" rel="noopener noreferrer">prototyping modular RNNs</a>.',
 		],
 	},
 	{
@@ -76,8 +76,8 @@ export const education = [
 			'Master project: Unsupervised discovery of discrete neural states in rats playing hide and seek',
 		supervisor: 'Prof. Dr. Michael Brecht, Dr. Juan Ignacio Sanguinetti-Scheck',
 		highlights: [
-      'Organized experimental data into a publicly available <a href="https://gin.g-node.org/bagibence/hidenseek_hmm">SQL database</a>.',
-      '<a href="https://github.com/bagibence/hidenseek_hmm">Used state-space models</a> (switching linear dynamical systems and hidden Markov models) to study neural activity in prefrontal cortex of rats playing hide-and-seek.',
+      'Organized experimental data into a publicly available <a href="https://gin.g-node.org/bagibence/hidenseek_hmm" target="_blank" rel="noopener noreferrer">SQL database</a>.',
+      '<a href="https://github.com/bagibence/hidenseek_hmm" target="_blank" rel="noopener noreferrer">Used state-space models</a> (switching linear dynamical systems and hidden Markov models) to study neural activity in prefrontal cortex of rats playing hide-and-seek.',
       'Showed that the models segment brain activity into meaningful states related to the rats\' behavior in an unsupervised way, and validated my results using statistical analysis and supervised decoding of behavior from neural activity.',
       'Demonstrated a novel bottom-up method for discovering what behaviors elicit changes in neural activity.',
 		],
