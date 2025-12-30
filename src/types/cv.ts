@@ -37,11 +37,15 @@ export interface Publication {
   }[];
 }
 
-export function isExperience(element: Experience | Education): element is Experience {
+export function isExperience(
+  element: Experience | Education
+): element is Experience {
   return 'title' in element && 'company' in element;
 }
 
-export function isEducation(element: Education | Experience): element is Education {
+export function isEducation(
+  element: Education | Experience
+): element is Education {
   return 'school' in element && 'degree' in element;
 }
 
@@ -49,6 +53,8 @@ export function isSkill(element: Skill | Publication): element is Skill {
   return 'description' in element;
 }
 
-export function isPublication(element: Skill | Publication): element is Publication {
+export function isPublication(
+  element: Skill | Publication
+): element is Publication {
   return 'authors' in element;
 }

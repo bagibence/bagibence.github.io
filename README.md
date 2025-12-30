@@ -10,6 +10,7 @@ If you find Astro Academia useful or appreciate my work, consider supporting me!
 <a href="https://www.producthunt.com/products/astro-academia?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-astro&#0045;academia" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1026976&theme=light&t=1760776422941" alt="Astro&#0032;Academia - Academic&#0032;website&#0032;template | Product Hunt" style="width: 189px; height: 41px;" width="189" height="41" /></a>
 
 ### Demo
+
 You can see Astro Academia at the following link: <a href="https://maiobarbero.github.io/astro_academia/" target="_blank">demo page</a>
 
 ## How to use it
@@ -26,26 +27,26 @@ The `cv.ts` file located in the `src/data/` directory is used to define the stru
 export const cv = {
   education: [
     {
-      degree: "Ph.D. in Computer Science",
-      institution: "University of Example",
-      year: "2020",
+      degree: 'Ph.D. in Computer Science',
+      institution: 'University of Example',
+      year: '2020',
     },
     {
-      degree: "M.Sc. in Computer Science",
-      institution: "University of Example",
-      year: "2016",
+      degree: 'M.Sc. in Computer Science',
+      institution: 'University of Example',
+      year: '2016',
     },
   ],
   experience: [
     {
-      title: "Research Scientist",
-      company: "Example Research Lab",
-      year: "2021-Present",
+      title: 'Research Scientist',
+      company: 'Example Research Lab',
+      year: '2021-Present',
     },
     {
-      title: "Software Engineer",
-      company: "Tech Company",
-      year: "2016-2021",
+      title: 'Software Engineer',
+      company: 'Tech Company',
+      year: '2016-2021',
     },
   ],
   // Add more sections as needed
@@ -62,12 +63,12 @@ The `settings.ts` file located in the `src/` directory is used to configure vari
 
 ```typescript
 export const settings = {
-  siteTitle: "Astro Academia",
-  siteDescription: "A personal academic website built with Astro.",
+  siteTitle: 'Astro Academia',
+  siteDescription: 'A personal academic website built with Astro.',
   socialLinks: {
-    twitter: "https://twitter.com/yourusername",
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
+    twitter: 'https://twitter.com/yourusername',
+    github: 'https://github.com/yourusername',
+    linkedin: 'https://linkedin.com/in/yourusername',
   },
   // Add more settings as needed
 };
@@ -89,10 +90,10 @@ The blog collection is located in the `src/content/BlogPosts/` directory. Each b
 
 ```markdown
 ---
-title: "New Blog Post"
-date: "2023-10-01"
-tags: ["research", "astro"]
-excerpt: "Some short paragraphs"
+title: 'New Blog Post'
+date: '2023-10-01'
+tags: ['research', 'astro']
+excerpt: 'Some short paragraphs'
 ---
 
 # New Blog Post
@@ -103,4 +104,5 @@ This is the content of the new blog post. Write your article here using Markdown
 Once you have added the new blog post, it will be automatically included in the blog collection and displayed on the blog page of your website.
 
 ## Deploy
+
 The template provides a workflow to deploy the website on Github pages as a static website.

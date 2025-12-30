@@ -1,92 +1,152 @@
 ---
-import Envelope from '@/assets/social-icons/envelope.svg'
-import GitHub from '@/assets/social-icons/github.svg'
-import GitLab from '@/assets/social-icons/gitlab.svg'
-import LinkedIn from '@/assets/social-icons/linkedin-in.svg'
-import Scholar from '@/assets/social-icons/google-scholar.svg'
-import X from '@/assets/social-icons/x-twitter.svg'
-import Bluesky from '@/assets/social-icons/bluesky.svg'
-import Inspire from '@/assets/social-icons/inspire.svg'
-import Arxiv from '@/assets/social-icons/arxiv.svg'
-import Orcid from '@/assets/social-icons/orcid.svg'
+import Envelope from '@/assets/social-icons/envelope.svg';
+import GitHub from '@/assets/social-icons/github.svg';
+import GitLab from '@/assets/social-icons/gitlab.svg';
+import LinkedIn from '@/assets/social-icons/linkedin-in.svg';
+import Scholar from '@/assets/social-icons/google-scholar.svg';
+import X from '@/assets/social-icons/x-twitter.svg';
+import Bluesky from '@/assets/social-icons/bluesky.svg';
+import Inspire from '@/assets/social-icons/inspire.svg';
+import Arxiv from '@/assets/social-icons/arxiv.svg';
+import Orcid from '@/assets/social-icons/orcid.svg';
 
-import { social } from '@/settings'
-import ExternalLink from '@/components/ui/ExternalLink.astro'
+import { social } from '@/settings';
+import ExternalLink from '@/components/ui/ExternalLink.astro';
 
-const activeSocial = Object.keys(social).filter((key) => social[key as keyof typeof social] !== '')
-const calculatedIconSize = activeSocial.length <= 5 ? 'size-6' : activeSocial.length <= 6 ? 'size-5' : 'size-4'
-const calculatedContainerSize = activeSocial.length <= 5 ? 'size-12' : activeSocial.length <= 6 ? 'size-10' : 'size-8'
-
+const activeSocial = Object.keys(social).filter(
+  (key) => social[key as keyof typeof social] !== ''
+);
+const calculatedIconSize =
+  activeSocial.length <= 5
+    ? 'size-6'
+    : activeSocial.length <= 6
+      ? 'size-5'
+      : 'size-4';
+const calculatedContainerSize =
+  activeSocial.length <= 5
+    ? 'size-12'
+    : activeSocial.length <= 6
+      ? 'size-10'
+      : 'size-8';
 ---
 
-<div class='flex flex-wrap justify-between items-center'>
+<div class="flex flex-wrap justify-between items-center">
+  <!-- Email -->
+  {
+    social.email !== '' && (
+      <a
+        href={`mailto:${social.email}`}
+        class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}
+      >
+        <Envelope class={calculatedIconSize} fill="currentColor" />
+      </a>
+    )
+  }
 
-	<!-- Email -->
-	{social.email !== '' &&
-		<a href={`mailto:${social.email}`}  class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
-			<Envelope class={calculatedIconSize} fill="currentColor" />
-		</a>
-	}
+  <!-- GitHub -->
+  {
+    social.github !== '' && (
+      <ExternalLink
+        href={social.github}
+        class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}
+      >
+        <GitHub class={calculatedIconSize} fill="currentColor" />
+      </ExternalLink>
+    )
+  }
 
-	<!-- GitHub -->
-	{social.github !== '' &&
-		<ExternalLink href={social.github} class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
-			<GitHub class={calculatedIconSize} fill="currentColor" />
-		</ExternalLink>
-	}
+  <!-- GitLab -->
+  {
+    social.gitlab !== '' && (
+      <ExternalLink
+        href={social.gitlab}
+        class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}
+      >
+        <GitLab class={calculatedIconSize} fill="currentColor" />
+      </ExternalLink>
+    )
+  }
 
-	<!-- GitLab -->
-	{social.gitlab !== '' &&
-		<ExternalLink href={social.gitlab} class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
-			<GitLab class={calculatedIconSize} fill="currentColor" />
-	</ExternalLink>
-	}
+  <!-- X -->
+  {
+    social.x !== '' && (
+      <ExternalLink
+        href={social.x}
+        class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}
+      >
+        <X class={calculatedIconSize} fill="currentColor" />
+      </ExternalLink>
+    )
+  }
 
-	<!-- X -->
-	{social.x !== '' &&
-		<ExternalLink href={social.x} class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
-			<X class={calculatedIconSize} fill="currentColor" />
-		</ExternalLink>
-	}
+  <!-- Bluesky -->
+  {
+    social.bluesky !== '' && (
+      <ExternalLink
+        href={social.bluesky}
+        class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}
+      >
+        <Bluesky class={calculatedIconSize} fill="currentColor" />
+      </ExternalLink>
+    )
+  }
 
-	<!-- Bluesky -->
-	{social.bluesky !== '' &&
-		<ExternalLink href={social.bluesky} class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
-			<Bluesky class={calculatedIconSize} fill="currentColor" />
-		</ExternalLink>
-	}
+  <!-- Linkedin -->
+  {
+    social.linkedin !== '' && (
+      <ExternalLink
+        href={social.linkedin}
+        class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}
+      >
+        <LinkedIn class={calculatedIconSize} fill="currentColor" />
+      </ExternalLink>
+    )
+  }
 
-	<!-- Linkedin -->
-	{social.linkedin !== '' &&
-		<ExternalLink href={social.linkedin} class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
-			<LinkedIn class={calculatedIconSize} fill="currentColor" />
-		</ExternalLink>
-	}
+  <!-- Google Scholar -->
+  {
+    social.scholar !== '' && (
+      <ExternalLink
+        href={social.scholar}
+        class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}
+      >
+        <Scholar class={calculatedIconSize} fill="currentColor" />
+      </ExternalLink>
+    )
+  }
 
-	<!-- Google Scholar -->
-	{social.scholar !== '' &&
-		<ExternalLink href={social.scholar} class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
-			<Scholar class={calculatedIconSize} fill="currentColor" />
-		</ExternalLink>
-	}
+  <!-- Inspire -->
+  {
+    social.inspire !== '' && (
+      <ExternalLink
+        href={social.inspire}
+        class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}
+      >
+        <Inspire class={calculatedIconSize} fill="currentColor" />
+      </ExternalLink>
+    )
+  }
 
-<!-- Inspire -->
-	{social.inspire !== '' &&
-		<ExternalLink href={social.inspire} class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
-			<Inspire class={calculatedIconSize} fill="currentColor" />
-		</ExternalLink>
-	}
-
-<!-- arxiv -->
-	{social.arxiv !== '' &&
-		<ExternalLink href={social.arxiv} class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
-			<Arxiv class={calculatedIconSize} fill="currentColor" />
-		</ExternalLink>
-	  }
-    <!-- orcid -->
-	  {social.orcid !== '' &&
-		<ExternalLink href={social.orcid} class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
-			<Orcid class={calculatedIconSize} fill="currentColor" />
-		</ExternalLink>
-	}
+  <!-- arxiv -->
+  {
+    social.arxiv !== '' && (
+      <ExternalLink
+        href={social.arxiv}
+        class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}
+      >
+        <Arxiv class={calculatedIconSize} fill="currentColor" />
+      </ExternalLink>
+    )
+  }
+  <!-- orcid -->
+  {
+    social.orcid !== '' && (
+      <ExternalLink
+        href={social.orcid}
+        class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}
+      >
+        <Orcid class={calculatedIconSize} fill="currentColor" />
+      </ExternalLink>
+    )
+  }
 </div>

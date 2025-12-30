@@ -3,99 +3,110 @@ import { isExperience } from '@/types/cv';
 import type { Experience, Education } from '@/types/cv';
 
 interface Props {
-	elements: (Experience | Education)[]
-	colored: boolean
+  elements: (Experience | Education)[];
+  colored: boolean;
 }
 
-const { elements, colored } = Astro.props
+const { elements, colored } = Astro.props;
 ---
 
-<ul class='timeline timeline-snap-icon timeline-compact timeline-vertical cv-timeline'>
-	{
-		elements.map((element, index) => (
-			<li>
-				{index !== 0 && <hr class:list={[{ 'bg-accent': colored }]} />}
-				<div class='timeline-middle'>
-					<svg
-						xmlns='http://www.w3.org/2000/svg'
-						viewBox='0 0 20 20'
-						fill='currentColor'
-						class:list={[{ 'text-accent': colored }, 'h-5 w-5']}
-					>
-						<circle cx='10' cy='10' r='6' />
-					</svg>
-				</div>
-				<div class='timeline-end mb-6 text-start'>
-					<div class='text-lg font-bold'>
-						{isExperience(element) ? (
-							<>
-								{element.title}
-								<span class='text-base font-normal text-neutral-500'>
-									{' | '}{element.company}{element.location && (
-										<span class='text-neutral-400'>{`, ${element.location}`}</span>
-									)}
-								</span>
-							</>
-						) : (
-							<>
-								{element.degree}
-								<span class='text-base font-normal text-neutral-500'>
-									{' | '}{element.school}{element.location && (
-										<span class='text-neutral-400'>{`, ${element.location}`}</span>
-									)}
-								</span>
-							</>
-						)}
-					</div>
-					<time class='text-sm font-mono italic text-neutral-500'>{element.time}</time>
-					<div class='mt-4'>
-						{isExperience(element) ? (
-							<>
-								{element.description && <div set:html={element.description} />}
-								{element.highlights && element.highlights.length > 0 && (
-									<ul class='cv-highlights list-disc pl-5 text-base'>
-										{element.highlights.map((highlight) => (
-											<li set:html={highlight} />
-										))}
-									</ul>
-								)}
-							</>
-						) : (
-							<>
-								{element.grade && <div class='text-sm text-neutral-500'>{element.grade}</div>}
-								{element.project && <div class='text-base'>{element.project}</div>}
-								{element.supervisor && (
-									<div class='text-base'>Supervisor: {element.supervisor}</div>
-								)}
-								{element.description && <div set:html={element.description} />}
-								{element.highlights && element.highlights.length > 0 && (
-									<ul class='cv-highlights list-disc pl-5 text-base'>
-										{element.highlights.map((highlight) => (
-											<li set:html={highlight} />
-										))}
-									</ul>
-								)}
-							</>
-						)}
-					</div>
-				</div>
-				{index !== elements.length - 1 && (
-					<hr class:list={[{ 'bg-accent': colored }]} />
-				)}
-			</li>
-		))
-	}
+<ul
+  class="timeline timeline-snap-icon timeline-compact timeline-vertical cv-timeline"
+>
+  {
+    elements.map((element, index) => (
+      <li>
+        {index !== 0 && <hr class:list={[{ 'bg-accent': colored }]} />}
+        <div class="timeline-middle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class:list={[{ 'text-accent': colored }, 'h-5 w-5']}
+          >
+            <circle cx="10" cy="10" r="6" />
+          </svg>
+        </div>
+        <div class="timeline-end mb-6 text-start">
+          <div class="text-lg font-bold">
+            {isExperience(element) ? (
+              <>
+                {element.title}
+                <span class="text-base font-normal text-neutral-500">
+                  {' | '}
+                  {element.company}
+                  {element.location && (
+                    <span class="text-neutral-400">{`, ${element.location}`}</span>
+                  )}
+                </span>
+              </>
+            ) : (
+              <>
+                {element.degree}
+                <span class="text-base font-normal text-neutral-500">
+                  {' | '}
+                  {element.school}
+                  {element.location && (
+                    <span class="text-neutral-400">{`, ${element.location}`}</span>
+                  )}
+                </span>
+              </>
+            )}
+          </div>
+          <time class="text-sm font-mono italic text-neutral-500">
+            {element.time}
+          </time>
+          <div class="mt-4">
+            {isExperience(element) ? (
+              <>
+                {element.description && <div set:html={element.description} />}
+                {element.highlights && element.highlights.length > 0 && (
+                  <ul class="cv-highlights list-disc pl-5 text-base">
+                    {element.highlights.map((highlight) => (
+                      <li set:html={highlight} />
+                    ))}
+                  </ul>
+                )}
+              </>
+            ) : (
+              <>
+                {element.grade && (
+                  <div class="text-sm text-neutral-500">{element.grade}</div>
+                )}
+                {element.project && (
+                  <div class="text-base">{element.project}</div>
+                )}
+                {element.supervisor && (
+                  <div class="text-base">Supervisor: {element.supervisor}</div>
+                )}
+                {element.description && <div set:html={element.description} />}
+                {element.highlights && element.highlights.length > 0 && (
+                  <ul class="cv-highlights list-disc pl-5 text-base">
+                    {element.highlights.map((highlight) => (
+                      <li set:html={highlight} />
+                    ))}
+                  </ul>
+                )}
+              </>
+            )}
+          </div>
+        </div>
+        {index !== elements.length - 1 && (
+          <hr class:list={[{ 'bg-accent': colored }]} />
+        )}
+      </li>
+    ))
+  }
 </ul>
 
 <style>
-	:global(.cv-timeline a) {
-		text-decoration: underline;
-	}
+  :global(.cv-timeline a) {
+    text-decoration: underline;
+  }
 
-	:global(.cv-timeline li ul) {
-		list-style: disc;
-		margin: 0.4rem 0 0.4rem 1.25rem;
-		padding: 0;
-	}
-
+  :global(.cv-timeline li ul) {
+    list-style: disc;
+    margin: 0.4rem 0 0.4rem 1.25rem;
+    padding: 0;
+  }
 </style>

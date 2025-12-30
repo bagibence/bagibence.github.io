@@ -1,13 +1,16 @@
 // .prettierrc.mjs
 /** @type {import("prettier").Config} */
 export default {
-  plugins: ["prettier-plugin-astro"],
+  plugins: ['prettier-plugin-astro'],
   tabWidth: 2,
+  semi: true,
+  singleQuote: true,
+  trailingComma: 'es5',
   overrides: [
     {
-      files: "*.astro",
+      files: '*.astro',
       options: {
-        parser: "astro",
+        parser: 'astro',
       },
     },
   ],

@@ -1,17 +1,20 @@
 ---
-import { Image } from 'astro:assets'
+import { Image } from 'astro:assets';
 
-import Bio from '../../content/bio.md'
-import SocialIcons from './SocialIcons.astro'
+import Bio from '../../content/bio.md';
+import SocialIcons from './SocialIcons.astro';
 
-const {fullName, title, institute, profilePicture} = Astro.props
+const { fullName, title, institute, profilePicture } = Astro.props;
 ---
-<div class='flex-1'>
-  <h1 class='text-4xl font-bold mb-4'>
+
+<div class="flex-1">
+  <h1 class="text-4xl font-bold mb-4">
     {fullName}
   </h1>
-  <p class='text-xl text-gray-600 mb-4'>{title}{institute ? ` at ${institute}` : ''}</p>
-  <div class='prose prose-lg max-w-none'>
+  <p class="text-xl text-gray-600 mb-4">
+    {title}{institute ? ` at ${institute}` : ''}
+  </p>
+  <div class="prose prose-lg max-w-none">
     <Bio />
   </div>
   <!--
@@ -28,4 +31,3 @@ const {fullName, title, institute, profilePicture} = Astro.props
     class='w-full h-full mask mask-circle size-44 object-cover object-center'
   />
 -->
-</div>
