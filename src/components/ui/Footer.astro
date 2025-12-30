@@ -1,5 +1,6 @@
 ---
 import { profile } from '../../settings'
+import ExternalLink from '@/components/ui/ExternalLink.astro'
 
 const { fullName } = profile
 ---
@@ -10,14 +11,14 @@ const { fullName } = profile
 			Copyright © {new Date().getFullYear()} - All right reserved by {fullName}
 		</p>
 		<p>
-			Built with <a
+			Built with <ExternalLink
 				href='https://github.com/maiobarbero/astro_academia'
 				class='font-bold'
-				target='_blank'>Astro Academia</a
-			> 🎓 by <a
+			>Astro Academia</ExternalLink>
+			🎓 by <ExternalLink
 				href='http://maiobarbero.dev'
-        class="font-bold"
-				target='_blank'>Matteo Barbero</a>
+				class='font-bold'
+			>Matteo Barbero</ExternalLink>
 		</p>
 	</aside>
 </footer>

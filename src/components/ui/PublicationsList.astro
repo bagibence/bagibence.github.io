@@ -2,6 +2,7 @@
 import { isSkill } from '@/types/cv';
 import type { Skill, Publication } from '@/types/cv';
 import { highlightAuthor } from '@/lib/utils'
+import ExternalLink from '@/components/ui/ExternalLink.astro'
 
 interface Props {
 	elements: (Skill | Publication)[]
@@ -17,13 +18,12 @@ const { elements } = Astro.props
         <h3 class='text-lg font-bold mb-2'>{element.title}</h3>
         <p>{element.description}</p>
         </> : <>
-      <a
+      <ExternalLink
         href={element.link as string}
         class='block hover:text-accent transition-colors duration-200'
-        target='_blank'
       >
         <h3 class='text-lg font-bold mb-2'>{element.title}</h3>
-      </a>
+      </ExternalLink>
       <p class='text-base mb-2'>
         <span class='font-medium'>Authors:</span>{' '}
         <span
@@ -40,13 +40,12 @@ const { elements } = Astro.props
           <span class='font-medium'>Resources:</span>{' '}
           {element.resources.map((resource, resourceIndex) => (
             <>
-              <a
+              <ExternalLink
                 href={resource.url}
                 class='hover:text-accent transition-colors duration-200'
-                target='_blank'
               >
                 {resource.label}
-              </a>
+              </ExternalLink>
               {resourceIndex < element.resources.length - 1 && (
                 <span> • </span>
               )}

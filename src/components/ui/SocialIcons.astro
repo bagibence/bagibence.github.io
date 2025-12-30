@@ -11,6 +11,7 @@ import Arxiv from '@/assets/social-icons/arxiv.svg'
 import Orcid from '@/assets/social-icons/orcid.svg'
 
 import { social } from '@/settings'
+import ExternalLink from '@/components/ui/ExternalLink.astro'
 
 const activeSocial = Object.keys(social).filter((key) => social[key as keyof typeof social] !== '')
 const calculatedIconSize = activeSocial.length <= 5 ? 'size-6' : activeSocial.length <= 6 ? 'size-5' : 'size-4'
@@ -29,63 +30,63 @@ const calculatedContainerSize = activeSocial.length <= 5 ? 'size-12' : activeSoc
 
 	<!-- GitHub -->
 	{social.github !== '' &&
-		<a href={social.github} target="_blank" class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
+		<ExternalLink href={social.github} class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
 			<GitHub class={calculatedIconSize} fill="currentColor" />
-		</a>
+		</ExternalLink>
 	}
 
 	<!-- GitLab -->
 	{social.gitlab !== '' &&
-		<a href={social.gitlab} target="_blank" class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
+		<ExternalLink href={social.gitlab} class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
 			<GitLab class={calculatedIconSize} fill="currentColor" />
-	</a>
+	</ExternalLink>
 	}
 
 	<!-- X -->
 	{social.x !== '' &&
-		<a href={social.x} target="_blank" class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
+		<ExternalLink href={social.x} class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
 			<X class={calculatedIconSize} fill="currentColor" />
-		</a>
+		</ExternalLink>
 	}
 
 	<!-- Bluesky -->
 	{social.bluesky !== '' &&
-		<a href={social.bluesky} target="_blank" class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
+		<ExternalLink href={social.bluesky} class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
 			<Bluesky class={calculatedIconSize} fill="currentColor" />
-		</a>
+		</ExternalLink>
 	}
 
 	<!-- Linkedin -->
 	{social.linkedin !== '' &&
-		<a href={social.linkedin} target="_blank" class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
+		<ExternalLink href={social.linkedin} class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
 			<LinkedIn class={calculatedIconSize} fill="currentColor" />
-		</a>
+		</ExternalLink>
 	}
 
 	<!-- Google Scholar -->
 	{social.scholar !== '' &&
-		<a href={social.scholar} target="_blank" class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
+		<ExternalLink href={social.scholar} class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
 			<Scholar class={calculatedIconSize} fill="currentColor" />
-		</a>
+		</ExternalLink>
 	}
 
 <!-- Inspire -->
 	{social.inspire !== '' &&
-		<a href={social.inspire} target="_blank" class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
+		<ExternalLink href={social.inspire} class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
 			<Inspire class={calculatedIconSize} fill="currentColor" />
-		</a>
+		</ExternalLink>
 	}
 
 <!-- arxiv -->
 	{social.arxiv !== '' &&
-		<a href={social.arxiv} target="_blank" class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
+		<ExternalLink href={social.arxiv} class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
 			<Arxiv class={calculatedIconSize} fill="currentColor" />
-		</a>
+		</ExternalLink>
 	  }
     <!-- orcid -->
 	  {social.orcid !== '' &&
-		<a href={social.orcid} target="_blank" class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
+		<ExternalLink href={social.orcid} class={`${calculatedContainerSize} inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all duration-300`}>
 			<Orcid class={calculatedIconSize} fill="currentColor" />
-		</a>
+		</ExternalLink>
 	}
 </div>
