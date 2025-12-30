@@ -48,37 +48,39 @@ const { elements, colored } = Astro.props
 						)}
 					</div>
 					<time class='font-mono italic'>{element.time}</time>
-					{isExperience(element) ? (
-						<>
-							{element.highlights && element.highlights.length > 0 ? (
-								<ul class='mt-2 list-disc pl-5 text-base'>
-									{element.highlights.map((highlight) => (
-										<li set:html={highlight} />
-									))}
-								</ul>
-							) : (
-								<>
-									{element.description && <div set:html={element.description} />}
-								</>
-							)}
-						</>
-					) : (
-						<>
-							{element.grade && <div class='text-sm text-neutral-500'>{element.grade}</div>}
-							{element.project && <div class='text-base'>{element.project}</div>}
-							{element.supervisor && (
-								<div class='text-base'>Supervisor: {element.supervisor}</div>
-							)}
-							{element.highlights && element.highlights.length > 0 && (
-								<ul class='mt-2 list-disc pl-5 text-base'>
-									{element.highlights.map((highlight) => (
-										<li set:html={highlight} />
-									))}
-								</ul>
-							)}
-							{element.description && <div set:html={element.description} />}
-						</>
-					)}
+					<div class='mt-4'>
+						{isExperience(element) ? (
+							<>
+								{element.highlights && element.highlights.length > 0 ? (
+									<ul class='list-disc pl-5 text-base'>
+										{element.highlights.map((highlight) => (
+											<li set:html={highlight} />
+										))}
+									</ul>
+								) : (
+									<>
+										{element.description && <div set:html={element.description} />}
+									</>
+								)}
+							</>
+						) : (
+							<>
+								{element.grade && <div class='text-sm text-neutral-500'>{element.grade}</div>}
+								{element.project && <div class='text-base'>{element.project}</div>}
+								{element.supervisor && (
+									<div class='text-base'>Supervisor: {element.supervisor}</div>
+								)}
+								{element.highlights && element.highlights.length > 0 && (
+									<ul class='list-disc pl-5 text-base'>
+										{element.highlights.map((highlight) => (
+											<li set:html={highlight} />
+										))}
+									</ul>
+								)}
+								{element.description && <div set:html={element.description} />}
+							</>
+						)}
+					</div>
 				</div>
 				{index !== elements.length - 1 && (
 					<hr class:list={[{ 'bg-accent': colored }]} />
