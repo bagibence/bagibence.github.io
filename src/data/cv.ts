@@ -1,13 +1,23 @@
 // TODO: Update these to match my actual cv with better descriptions
 export const experiences = [
 	{
-		company: 'Freelance',
+		company: 'Freelance for The Simons Foundation',
 		time: 'Feb 2025 - present',
-		title: 'Data Engineer, Research Software Engineer',
+		title: 'Research Software Engineer',
 		location: 'Berlin',
 		highlights: [
-			'<strong>Simons Foundation</strong>:<ul><li>migrated the optimization backend of <a href="https://github.com/flatironinstitute/nemos/">NeMoS</a> from JAXopt to Optimistix/Optax</li><li><a href="https://github.com/flatironinstitute/nemos/pull/365">designed a unified solver interface</a></li><li><a href="https://github.com/patrick-kidger/optimistix/pull/177">implemented JAX zoom linesearch</a> in Optimistix</li></ul>',
-			'<strong>BuildingMinds</strong>: data migration and processing pipelines (dbt) for sustainability calculations.',
+			'Migrated the optimization backend of <a href="https://github.com/flatironinstitute/nemos/">NeMoS</a> from JAXopt to Optimistix/Optax',
+      '<a href="https://github.com/flatironinstitute/nemos/pull/365">Designed a unified solver interface</a>',
+      '<a href="https://github.com/patrick-kidger/optimistix/pull/177">Implemented JAX zoom linesearch</a> in Optimistix',
+		],
+	},
+	{
+		company: 'Freelance for BuildingMinds GmbH',
+		time: 'Aug 2025 - Sept 2025',
+		title: 'Data Engineer',
+		location: 'Berlin',
+		highlights: [
+			'Data migration and processing pipelines (e.g. dbt) for sustainability calculations.',
 		],
 	},
 	{
@@ -23,8 +33,9 @@ export const experiences = [
 		time: 'May 2023 - Apr 2024',
 		title: 'Research Software Engineer',
 		location: 'London',
-		description:
+		highlights: [
 			'Kickstarted the development of a <a href="https://github.com/BeNeuroLab/beneuro_experimental_data_organization">data processing pipeline and CLI tool</a> for handling experimental data recorded in the <a href="https://beneuro.ic.ac.uk">Be.Neuro Lab.</a>',
+    ]
 	},
 	{
 		company: 'Freelance for OptioPay GmbH',
@@ -32,7 +43,7 @@ export const experiences = [
 		title: 'Data Scientist',
 		location: '',
 		description:
-			'Analyzed financial transactions and improved business logic using the insights gained; gained experience with Go, CI/CD, and microservice architectures.',
+			'<ul><li>Analyzed financial transactions and improved business logic using the insights gained.</li><li>Gained experience with Go, CI/CD, and microservice architectures.</li></ul>',
 	},
 ];
 
