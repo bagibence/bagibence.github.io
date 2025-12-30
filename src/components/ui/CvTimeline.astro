@@ -51,16 +51,13 @@ const { elements, colored } = Astro.props
 					<div class='mt-4'>
 						{isExperience(element) ? (
 							<>
-								{element.highlights && element.highlights.length > 0 ? (
-									<ul class='list-disc pl-5 text-base'>
+								{element.description && <div set:html={element.description} />}
+								{element.highlights && element.highlights.length > 0 && (
+									<ul class='cv-highlights list-disc pl-5 text-base'>
 										{element.highlights.map((highlight) => (
 											<li set:html={highlight} />
 										))}
 									</ul>
-								) : (
-									<>
-										{element.description && <div set:html={element.description} />}
-									</>
 								)}
 							</>
 						) : (
@@ -70,14 +67,14 @@ const { elements, colored } = Astro.props
 								{element.supervisor && (
 									<div class='text-base'>Supervisor: {element.supervisor}</div>
 								)}
+								{element.description && <div set:html={element.description} />}
 								{element.highlights && element.highlights.length > 0 && (
-									<ul class='list-disc pl-5 text-base'>
+									<ul class='cv-highlights list-disc pl-5 text-base'>
 										{element.highlights.map((highlight) => (
 											<li set:html={highlight} />
 										))}
 									</ul>
 								)}
-								{element.description && <div set:html={element.description} />}
 							</>
 						)}
 					</div>
@@ -100,4 +97,5 @@ const { elements, colored } = Astro.props
 		margin: 0.4rem 0 0.4rem 1.25rem;
 		padding: 0;
 	}
+
 </style>
