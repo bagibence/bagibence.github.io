@@ -38,7 +38,7 @@ export const projects: Project[] = [
     title:
       'Systematic simplification and optimization of simplified neuronal models; Simulation of hippocampal network dynamics using simplified neuronal models',
     description:
-      'I compared optimization algorithms (e.g. evolutionary algorithms) for fitting spiking neuron models to electrophysiological recordings, integrated these into a spiking network model of the hippocampal CA3 region, and assisted in optimizing the network parameters to produce sharp-wave-ripples and replay.',
+      'Compared optimization algorithms (e.g. evolutionary algorithms) for fitting spiking neuron models to electrophysiological recordings, integrated these into a spiking network model of the hippocampal CA3 region, and assisted in optimizing the network parameters to produce sharp-wave-ripples and replay.',
     image: evolutionaryAlgoFit,
     imageAlt: 'Evolutionary algorithm fit visualization',
     time: 'Jan 2016 - Jan 2017',
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     title:
       'Analysis of neural data simultaneously recorded from two visual areas in mice',
     description:
-      'I reproduced the findings of <a href="https://www.cell.com/neuron/pdfExtended/S0896-6273(19)30053-4" target="_blank" rel="noopener noreferrer">Semedo et al. (Neuron, 2019)</a>, studying the communication between brain areas, testing the "communication subspace" hypothesis using reduced-rank regression.',
+      'Reproduced the findings of <a href="https://www.cell.com/neuron/pdfExtended/S0896-6273(19)30053-4" target="_blank" rel="noopener noreferrer">Semedo et al. (Neuron, 2019)</a>, studying the communication between brain areas, testing the "communication subspace" hypothesis using reduced-rank regression.',
     time: 'Jul 2019 - Nov 2019',
     supervisor: 'Joram Keijser, Prof. Dr. Henning Sprekeler',
     school: 'Technische Universität Berlin',
@@ -63,7 +63,7 @@ export const projects: Project[] = [
     title:
       'Hazard rate approach to neural population dynamics with external noise',
     description:
-      'I wrote simulations in Julia to investigate how one can approximate a network of spiking neurons with noisy input using the population equations derived by <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005507" target="_blank" rel="noopener noreferrer">Schwalger (PLOS, 2017)</a>, reducing the simulation time and computing power required.',
+      'Wrote simulations in Julia to investigate how one can approximate a network of spiking neurons with noisy input using the population equations derived by <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005507" target="_blank" rel="noopener noreferrer">Schwalger (PLOS, 2017)</a>, reducing the simulation time and computing power required.',
     time: 'Nov 2018 - Feb 2019',
     supervisor: 'Prof. Dr. Tilo Schwalger',
     school: 'Technische Universität Berlin',
