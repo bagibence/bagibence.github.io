@@ -7,6 +7,17 @@ import smartWaterwaysLogo from '@/assets/smart_waterways_logo.png';
 export const projects: Project[] = [
   {
     category: 'research',
+    title: 'Neural correlates of movement planning under uncertainty',
+    description:
+      'Analyzed neural population recordings, making use of unsupervised, supervised, and reinforcement learning, to understand how coordinated neural activity gives rise to movement under uncertainty. Built lightweight <a href="https://github.com/NeuralAnalysis/PyalData" target="_blank" rel="noopener noreferrer">Python</a> and <a href="https://github.com/bagibence/TrialData.jl" target="_blank" rel="noopener noreferrer">Julia</a> libraries for trial-based neural data analysis, and one for <a href="https://github.com/beneurolab/modular_rnn" target="_blank" rel="noopener noreferrer">prototyping modular RNNs</a>.',
+    image: uncertaintyVsCenterOut,
+    imageAlt: 'Uncertainty versus center-out task comparison',
+    time: 'Oct 2020 - Mar 2025',
+    supervisor: 'Dr. Juan Alvaro Gallego',
+    school: 'Imperial College London',
+  },
+  {
+    category: 'research',
     title:
       'Unsupervised discovery of behaviorally relevant brain states in rats playing hide-and-seek',
     description:
@@ -24,14 +35,18 @@ export const projects: Project[] = [
   },
   {
     category: 'research',
-    title: 'Neural correlates of movement planning under uncertainty',
+    title:
+      'Systematic simplification and optimization of simplified neuronal models; Simulation of hippocampal network dynamics using simplified neuronal models',
     description:
-      'Analyzed neural population recordings, making use of unsupervised, supervised, and reinforcement learning, to understand how coordinated neural activity gives rise to movement under uncertainty. Built lightweight <a href="https://github.com/NeuralAnalysis/PyalData" target="_blank" rel="noopener noreferrer">Python</a> and <a href="https://github.com/bagibence/TrialData.jl" target="_blank" rel="noopener noreferrer">Julia</a> libraries for trial-based neural data analysis, and one for <a href="https://github.com/beneurolab/modular_rnn" target="_blank" rel="noopener noreferrer">prototyping modular RNNs</a>.',
-    image: uncertaintyVsCenterOut,
-    imageAlt: 'Uncertainty versus center-out task comparison',
-    time: 'Oct 2020 - Mar 2025',
-    supervisor: 'Dr. Juan Alvaro Gallego',
-    school: 'Imperial College London',
+      'I compared optimization algorithms (e.g. evolutionary algorithms) for fitting spiking neuron models to electrophysiological recordings, integrated these into a spiking network model of the hippocampal CA3 region, and assisted in optimizing the network parameters to produce sharp-wave-ripples and replay.',
+    image: evolutionaryAlgoFit,
+    imageAlt: 'Evolutionary algorithm fit visualization',
+    time: 'Jan 2016 - Jan 2017',
+    supervisor: 'Dr. Szabolcs Káli',
+    school:
+      'Institute of Experimental Medicine, Hungarian Academy of Sciences, Budapest',
+    publishedIn: 'eLife (2022)',
+    paperUrl: 'https://elifesciences.org/articles/71850v1',
   },
   {
     category: 'lab-rotation',
@@ -62,21 +77,6 @@ export const projects: Project[] = [
     time: 'Feb 2017 - Aug 2017',
     supervisor: 'Dr. Caglar Cakan, Dr. Moritz Augustin, Prof. Dr. Obermayer',
     school: 'Technische Universität Berlin',
-  },
-  {
-    category: 'research',
-    title:
-      'Simulation of hippocampal network dynamics using simplified neuronal models; systematic simplification and optimization of simplified neuronal models',
-    description:
-      'I compared optimization algorithms (e.g. evolutionary algorithms) for fitting spiking neuron models to electrophysiological recordings, integrated these into a spiking network model of the hippocampal CA3 region, and assisted in optimizing the network parameters to produce sharp-wave-ripples and replay.',
-    image: evolutionaryAlgoFit,
-    imageAlt: 'Evolutionary algorithm fit visualization',
-    time: 'Jan 2016 - Jan 2017',
-    supervisor: 'Dr. Szabolcs Káli',
-    school:
-      'Institute of Experimental Medicine, Hungarian Academy of Sciences, Budapest',
-    publishedIn: 'eLife (2022)',
-    paperUrl: 'https://elifesciences.org/articles/71850v1',
   },
   {
     category: 'hackathon',
