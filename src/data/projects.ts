@@ -2,6 +2,7 @@ import type { Project } from '@/types/projects';
 import hideAndSeekGraphicalAbstract from '@/assets/hide_and_seek_graphical_abstract.svg?url';
 import uncertaintyVsCenterOut from '@/assets/uncertainty_vs_center_out.webp';
 import evolutionaryAlgoFit from '@/assets/evolutionary_algo_fit.svg?url';
+import smartWaterwaysLogo from '@/assets/smart_waterways_logo.png';
 
 export const projects: Project[] = [
   {
@@ -82,7 +83,11 @@ export const projects: Project[] = [
     title: '10th CASSINI Hackathon',
     description:
       'Prototyped an approach for using satellite imagery to track water quality changes in Berlin’s lakes, with the potential to support <a href="http://www.visitberlin.de" target="_blank" rel="noopener noreferrer">visitBerlin</a> in promoting more sustainable activities and managing visitor pressure on polluted areas.',
+    image: smartWaterwaysLogo,
+    imageAlt: 'Smart Waterways logo',
     time: 'Nov 2025',
+    repoUrl:
+      'https://github.com/InesZenkri/Smart-Waterways/blob/main/mago_water_quality.ipynb',
   },
   {
     category: 'software',
