@@ -103,7 +103,7 @@ export const projects: Project[] = [
     category: 'software',
     title: 'NeMoS optimization backend migration',
     description:
-      'Migrated the optimization backend of <a href="https://github.com/flatironinstitute/nemos/" target="_blank" rel="noopener noreferrer">NeMoS</a> from JAXopt to Optimistix and Optax: <a href="https://github.com/flatironinstitute/nemos/pull/365" target="_blank" rel="noopener noreferrer">designed a unified solver interface</a>, <a href="https://github.com/flatironinstitute/nemos/pull/444" target="_blank" rel="noopener noreferrer">added support for auxiliary variables</a>, and <a href="https://github.com/flatironinstitute/nemos/pull/411" target="_blank" rel="noopener noreferrer">ported FISTA and Nesterov\'s accelerated gradient</a>.',
+      'Migrated the optimization backend of <a href="https://github.com/flatironinstitute/nemos/" target="_blank" rel="noopener noreferrer">NeMoS</a> from JAXopt to Optimistix and Optax: <a href="https://github.com/flatironinstitute/nemos/pull/365" target="_blank" rel="noopener noreferrer">designed a unified solver interface</a>, <a href="https://github.com/flatironinstitute/nemos/pull/444" target="_blank" rel="noopener noreferrer">added support for auxiliary variables</a>, <a href="https://github.com/flatironinstitute/nemos/pull/411" target="_blank" rel="noopener noreferrer">ported FISTA and Nesterov\'s accelerated gradient</a>, and <a href="https://github.com/patrick-kidger/optimistix/pull/177" target="_blank" rel="noopener noreferrer">implemented JAX zoom linesearch in Optimistix</a>.',
     time: 'Feb 2025 - present',
     company: 'Freelance for The Simons Foundation',
     repoUrl: 'https://github.com/flatironinstitute/nemos/',
