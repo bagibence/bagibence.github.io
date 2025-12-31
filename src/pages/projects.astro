@@ -5,124 +5,134 @@ import GitHub from '@/assets/social-icons/github.svg';
 import { projects } from '@/data/projects';
 
 const sections = [
-  { key: 'research', label: 'Research projects' },
+  { key: 'research', label: 'Thesis projects' },
   { key: 'software', label: 'Software projects' },
-  { key: 'lab-rotation', label: 'Lab rotations' },
+  { key: 'lab-rotation', label: 'Other research projects' },
   { key: 'hackathon', label: 'Hackathons' },
 ] as const;
 ---
 
 <Layout title="Projects | Dr. Marie Curie">
   <h1 class="text-3xl font-bold mb-8">Projects</h1>
-    {
-      sections.map((section) => {
-        const sectionProjects = projects.filter(
-          (project) => project.category === section.key
-        );
+  {
+    sections.map((section) => {
+      const sectionProjects = projects.filter(
+        (project) => project.category === section.key
+      );
 
-        if (sectionProjects.length === 0) {
-          return null;
-        }
+      if (sectionProjects.length === 0) {
+        return null;
+      }
 
-        return (
-          <section class="mb-10">
-            <h2 class="text-2xl font-bold mb-4">{section.label}</h2>
-            <div class="grid gap-6">
-              {sectionProjects.map((project) => (
-                <article class="rounded-2xl p-6">
-              <div
-                class={`grid gap-6 items-center ${project.image ? 'md:grid-cols-[12rem_1fr]' : ''}`}
-              >
-            {project.image && (
-              <img
-                src={typeof project.image === 'string' ? project.image : project.image.src}
-                alt={project.imageAlt ?? project.title}
-                class="w-full h-auto rounded-xl object-cover"
-                loading="lazy"
-                width={typeof project.image === 'string' ? undefined : project.image.width}
-                height={typeof project.image === 'string' ? undefined : project.image.height}
-              />
-            )}
-                    <div>
-                      <h3 class="text-lg font-bold mb-2">
-                        {project.title}
-                      </h3>
-                      {(project.time ||
-                        project.supervisor ||
-                        project.company ||
-                        project.school) && (
-                        <div class="mb-2 text-sm text-base-content/70">
-                          {project.time && (
-                            <span class="mr-3">{project.time}</span>
-                          )}
-                          {project.supervisor && (
-                            <span class="mr-3">
-                              Supervisor: {project.supervisor}
-                            </span>
-                          )}
-                          {project.company && (
-                            <span class="mr-3">{project.company}</span>
-                          )}
-                          {project.school && <span>{project.school}</span>}
-                        </div>
-                      )}
-                      <div
-                        class="text-base leading-relaxed"
-                        set:html={project.description}
-                      />
-                      {project.presentedAt && (
-                        <p class="mt-2 text-sm text-base-content/70 italic">
-                          Presented at: {project.presentedAt}
-                        </p>
-                      )}
-                      {project.publishedIn && (
-                        <p class="mt-2 text-sm text-base-content/70 italic">
-                          Published in: {project.publishedIn}
-                        </p>
-                      )}
-                      {(project.paperUrl ||
-                        project.repoUrl ||
-                        project.dataUrl) && (
-                        <div class="mt-3 flex items-center gap-3">
-                          {project.paperUrl && (
-                            <ExternalLink
-                              href={project.paperUrl}
-                              class="inline-flex items-center justify-center rounded-full border border-base-300/60 px-3 py-1 text-base-content/80 hover:text-base-content transition-colors"
-                              aria-label="Paper link"
-                              title="Paper"
-                            >
-                              <span class="text-lg leading-none">📃</span>
-                            </ExternalLink>
-                          )}
-                          {project.dataUrl && (
-                            <ExternalLink
-                              href={project.dataUrl}
-                              class="inline-flex items-center justify-center rounded-full border border-base-300/60 px-3 py-1 text-base-content/80 hover:text-base-content transition-colors"
-                              aria-label="Dataset link"
-                              title="Data"
-                            >
-                              <span class="text-lg leading-none">💾</span>
-                            </ExternalLink>
-                          )}
-                          {project.repoUrl && (
-                            <ExternalLink
-                              href={project.repoUrl}
-                              class="inline-flex items-center justify-center rounded-full border border-base-300/60 px-3 py-1 text-base-content/80 hover:text-base-content transition-colors"
-                              aria-label="GitHub repository"
-                              title="GitHub"
-                            >
-                              <GitHub class="size-5" fill="currentColor" />
-                            </ExternalLink>
-                          )}
-                        </div>
-                      )}
-                    </div>
+      return (
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{section.label}</h2>
+          <div class="grid gap-4">
+            {sectionProjects.map((project) => (
+              <article class="rounded-2xl p-6">
+                <div
+                  class={`grid gap-6 items-center ${project.image ? 'md:grid-cols-[12rem_1fr]' : ''}`}
+                >
+                  {project.image && (
+                    <img
+                      src={
+                        typeof project.image === 'string'
+                          ? project.image
+                          : project.image.src
+                      }
+                      alt={project.imageAlt ?? project.title}
+                      class="w-full h-auto rounded-xl object-cover"
+                      loading="lazy"
+                      width={
+                        typeof project.image === 'string'
+                          ? undefined
+                          : project.image.width
+                      }
+                      height={
+                        typeof project.image === 'string'
+                          ? undefined
+                          : project.image.height
+                      }
+                    />
+                  )}
+                  <div>
+                    <h3 class="text-lg font-bold mb-2">{project.title}</h3>
+                    {(project.time ||
+                      project.supervisor ||
+                      project.company ||
+                      project.school) && (
+                      <div class="mb-2 text-sm text-base-content/70">
+                        {project.time && (
+                          <span class="mr-3">{project.time}</span>
+                        )}
+                        {project.supervisor && (
+                          <span class="mr-3">
+                            Supervisor: {project.supervisor}
+                          </span>
+                        )}
+                        {project.company && (
+                          <span class="mr-3">{project.company}</span>
+                        )}
+                        {project.school && <span>{project.school}</span>}
+                      </div>
+                    )}
+                    <div
+                      class="text-base leading-relaxed"
+                      set:html={project.description}
+                    />
+                    {project.presentedAt && (
+                      <p class="mt-2 text-sm text-base-content/70 italic">
+                        Presented at: {project.presentedAt}
+                      </p>
+                    )}
+                    {project.publishedIn && (
+                      <p class="mt-2 text-sm text-base-content/70 italic">
+                        Published in: {project.publishedIn}
+                      </p>
+                    )}
+                    {(project.paperUrl ||
+                      project.repoUrl ||
+                      project.dataUrl) && (
+                      <div class="mt-3 flex items-center gap-3">
+                        {project.paperUrl && (
+                          <ExternalLink
+                            href={project.paperUrl}
+                            class="inline-flex items-center justify-center rounded-full border border-base-300/60 px-3 py-1 text-base-content/80 hover:text-base-content transition-colors"
+                            aria-label="Paper link"
+                            title="Paper"
+                          >
+                            <span class="text-lg leading-none">📃</span>
+                          </ExternalLink>
+                        )}
+                        {project.dataUrl && (
+                          <ExternalLink
+                            href={project.dataUrl}
+                            class="inline-flex items-center justify-center rounded-full border border-base-300/60 px-3 py-1 text-base-content/80 hover:text-base-content transition-colors"
+                            aria-label="Dataset link"
+                            title="Data"
+                          >
+                            <span class="text-lg leading-none">💾</span>
+                          </ExternalLink>
+                        )}
+                        {project.repoUrl && (
+                          <ExternalLink
+                            href={project.repoUrl}
+                            class="inline-flex items-center justify-center rounded-full border border-base-300/60 px-3 py-1 text-base-content/80 hover:text-base-content transition-colors"
+                            aria-label="GitHub repository"
+                            title="GitHub"
+                          >
+                            <GitHub class="size-5" fill="currentColor" />
+                          </ExternalLink>
+                        )}
+                      </div>
+                    )}
                   </div>
-                </article>
-              ))}
-            </div>
-          </section>
-        );
-      })
-    }
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      );
+    })
+  }
 </Layout>
