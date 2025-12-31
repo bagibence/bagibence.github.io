@@ -1,6 +1,7 @@
 import type { ImageMetadata } from 'astro';
 
 export interface Project {
+  category: 'research' | 'software' | 'lab-rotation' | 'hackathon';
   title: string;
   description: string;
   image?: string | ImageMetadata;
