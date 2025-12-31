@@ -1,6 +1,6 @@
 import type { Project } from '@/types/projects';
 import hideAndSeekGraphicalAbstract from '@/assets/hide_and_seek_graphical_abstract.svg?url';
-import uncertaintyVsCenterOut from '@/assets/uncertainty_vs_center_out.webp';
+import uncertaintyVsCenterOut from '@/assets/uncertainty_vs_center_out_short.webp';
 import evolutionaryAlgoFit from '@/assets/evolutionary_algo_fit.svg?url';
 import smartWaterwaysLogo from '@/assets/smart_waterways_logo.png';
 
