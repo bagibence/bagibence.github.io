@@ -1,86 +1,98 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import { profile } from '@/settings';
-import BetterIcon from '@/components/ui/BetterIcon.astro';
-import List from '@/components/ui/List.astro';
-import { RESEARCH_ICONS } from '@/data/researchIcons';
-
-const { research_areas } = profile;
+import ExternalLink from '@/components/ui/ExternalLink.astro';
+import GitHub from '@/assets/social-icons/github.svg';
+import { projects } from '@/data/projects';
 ---
 
 <Layout title="Projects | Dr. Marie Curie">
-  <div class="prose max-w-none">
-    <h1 class="text-3xl font-bold mb-8">Projects</h1>
-
-    <div class="mb-12">
-      <p class="text-lg mb-6">
-        My research focuses on groundbreaking investigations into radioactivity
-        and the discovery of new radioactive elements. Through meticulous
-        experimental techniques and innovative methodologies, I aim to advance
-        our understanding of radioactive phenomena and their applications in
-        both physics and chemistry.
-      </p>
-      <p class="text-lg mb-6">
-        This interdisciplinary approach has led to significant discoveries,
-        including the isolation of polonium and radium, contributing to the
-        foundation of modern nuclear physics and radiochemistry.
-      </p>
-    </div>
-
-    <h2 class="text-2xl font-bold mb-6">Research Areas</h2>
-    <div class="grid gap-8 mb-12">
-      {
-        research_areas.map((area) => (
-          <div class="flex gap-6 items-start">
-            <BetterIcon>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke-width="2"
-                class="size-6 stroke-accent"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d={
-                    RESEARCH_ICONS[area.field as keyof typeof RESEARCH_ICONS]
-                      ?.path || RESEARCH_ICONS['computer-science'].path
-                  }
-                />
-              </svg>
-            </BetterIcon>
+  <h1 class="text-3xl font-bold mb-8">Projects</h1>
+  <div class="grid gap-6">
+    {
+      projects.map((project) => (
+        <article class="rounded-2xl p-6">
+          <div
+            class={`grid gap-6 items-start ${project.image ? 'md:grid-cols-[12rem_1fr]' : ''}`}
+          >
+            {project.image && (
+              <img
+                src={project.image}
+                alt={project.imageAlt ?? project.title}
+                class="w-full h-auto rounded-xl object-cover border border-base-300/60"
+                loading="lazy"
+              />
+            )}
             <div>
-              <h3 class="text-xl font-semibold mb-2">{area.title}</h3>
-              <p class="text-base">{area.description}</p>
+              <h2 class="text-xl font-bold mb-2">{project.title}</h2>
+              {(project.time ||
+                project.supervisor ||
+                project.company ||
+                project.school) && (
+                <div class="mb-2 text-sm text-base-content/70">
+                  {project.time && (
+                    <span class="mr-3">{project.time}</span>
+                  )}
+                  {project.supervisor && (
+                    <span class="mr-3">Supervisor: {project.supervisor}</span>
+                  )}
+                  {project.company && (
+                    <span class="mr-3">{project.company}</span>
+                  )}
+                  {project.school && <span>{project.school}</span>}
+                </div>
+              )}
+              <div
+                class="text-base leading-relaxed"
+                set:html={project.description}
+              />
+              {project.presentedAt && (
+                <p class="mt-2 text-sm text-base-content/70 italic">
+                  Presented at: {project.presentedAt}
+                </p>
+              )}
+              {project.publishedIn && (
+                <p class="mt-2 text-sm text-base-content/70 italic">
+                  Published in: {project.publishedIn}
+                </p>
+              )}
+              {(project.paperUrl || project.repoUrl || project.dataUrl) && (
+                <div class="mt-3 flex items-center gap-3">
+                  {project.paperUrl && (
+                    <ExternalLink
+                      href={project.paperUrl}
+                      class="inline-flex items-center justify-center rounded-full border border-base-300/60 px-3 py-1 text-base-content/80 hover:text-base-content transition-colors"
+                      aria-label="Paper link"
+                      title="Paper"
+                    >
+                      <span class="text-lg leading-none">📄</span>
+                    </ExternalLink>
+                  )}
+                  {project.dataUrl && (
+                    <ExternalLink
+                      href={project.dataUrl}
+                      class="inline-flex items-center justify-center rounded-full border border-base-300/60 px-3 py-1 text-base-content/80 hover:text-base-content transition-colors"
+                      aria-label="Dataset link"
+                      title="Data"
+                    >
+                      <span class="text-lg leading-none">💾</span>
+                    </ExternalLink>
+                  )}
+                  {project.repoUrl && (
+                    <ExternalLink
+                      href={project.repoUrl}
+                      class="inline-flex items-center justify-center rounded-full border border-base-300/60 px-3 py-1 text-base-content/80 hover:text-base-content transition-colors"
+                      aria-label="GitHub repository"
+                      title="GitHub"
+                    >
+                      <GitHub class="size-5" fill="currentColor" />
+                    </ExternalLink>
+                  )}
+                </div>
+              )}
             </div>
           </div>
-        ))
-      }
-    </div>
-
-    <List
-      listTitle="Current Projects"
-      listItems={[
-        {
-          title: 'Radioactivity Studies',
-          description:
-            'Investigation of radioactive properties in uranium minerals and isolation of new radioactive elements.',
-        },
-        {
-          title: 'Measurement Techniques',
-          description:
-            'Development of precise methods for measuring radioactive emissions and their properties.',
-        },
-      ]}
-    />
-
-    <h2 class="text-2xl font-bold mb-6">Research Impact</h2>
-    <p class="text-lg mb-6">
-      My research has opened new frontiers in radioactivity studies, leading to
-      practical applications in both scientific research and medical treatments.
-      The discoveries have revolutionized our understanding of atomic structure
-      and radioactive decay processes.
-    </p>
+        </article>
+      ))
+    }
   </div>
 </Layout>
