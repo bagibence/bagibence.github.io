@@ -9,7 +9,7 @@ export const projects: Project[] = [
     category: 'research',
     title: 'Neural correlates of movement planning under uncertainty',
     description:
-      'Analyzed neural population recordings, making use of unsupervised, supervised, and reinforcement learning, to understand how coordinated neural activity gives rise to movement under uncertainty. Built lightweight <a href="https://github.com/NeuralAnalysis/PyalData" target="_blank" rel="noopener noreferrer">Python</a> and <a href="https://github.com/bagibence/TrialData.jl" target="_blank" rel="noopener noreferrer">Julia</a> libraries for trial-based neural data analysis, and one for <a href="https://github.com/beneurolab/modular_rnn" target="_blank" rel="noopener noreferrer">prototyping modular RNNs</a>.',
+      'Analyzed neural population recordings, making use of unsupervised, supervised, and reinforcement learning, to understand how coordinated neural activity gives rise to movement under uncertainty.',
     image: uncertaintyVsCenterOut,
     imageAlt: 'Uncertainty versus center-out task comparison',
     time: 'Oct 2020 - Mar 2025',
@@ -98,6 +98,13 @@ export const projects: Project[] = [
     company: 'Be.Neuro Lab',
     repoUrl:
       'https://github.com/BeNeuroLab/beneuro_experimental_data_organization',
+  },
+  {
+    category: 'software',
+    title: 'Trial-based data analysis and modular RNN tooling',
+    description:
+      'Built lightweight libraries for trial-based neural data analysis in <a href="https://github.com/NeuralAnalysis/PyalData" target="_blank" rel="noopener noreferrer">Python</a> and <a href="https://github.com/bagibence/TrialData.jl" target="_blank" rel="noopener noreferrer">Julia</a>, plus tooling for <a href="https://github.com/beneurolab/modular_rnn" target="_blank" rel="noopener noreferrer">prototyping modular RNNs</a>.',
+    repoUrl: 'https://github.com/NeuralAnalysis/PyalData',
   },
   {
     category: 'software',
