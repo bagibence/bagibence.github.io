@@ -3,7 +3,7 @@ export const experiences = [
     company: 'Freelance for The Simons Foundation',
     time: 'Feb 2025 - present',
     title: 'Research Software Engineer',
-    location: 'Berlin',
+    // location: 'Berlin',
     description:
       'Migrated the optimization backend of <a href="https://github.com/flatironinstitute/nemos/" target="_blank" rel="noopener noreferrer">NeMoS</a> from JAXopt to Optimistix and Optax:',
     highlights: [
@@ -17,7 +17,7 @@ export const experiences = [
     company: 'Freelance for BuildingMinds GmbH',
     time: 'Aug 2025 - Sept 2025',
     title: 'Data Engineer',
-    location: 'Berlin',
+    // location: 'Berlin',
     highlights: [
       'Created and updated data migration and processing pipelines (e.g. dbt) for sustainability calculations.',
     ],
@@ -27,7 +27,7 @@ export const experiences = [
       'NeuroRSE Group, Flatiron Institute Center for Computational Neuroscience',
     time: 'Jun 2024 - Aug 2024',
     title: 'Research Software Engineer Intern',
-    location: 'New York',
+    // location: 'New York',
     description:
       'Contributed to <a href="https://github.com/flatironinstitute/nemos" target="_blank" rel="noopener noreferrer">NeMoS</a>, a Python package for statistical models for neuroscience:',
     highlights: [
@@ -39,7 +39,7 @@ export const experiences = [
     company: 'Be.Neuro Lab',
     time: 'May 2023 - Apr 2024',
     title: 'Research Software Engineer',
-    location: 'London',
+    // location: 'London',
     highlights: [
       'Kickstarted the development of a <a href="https://github.com/BeNeuroLab/beneuro_experimental_data_organization" target="_blank" rel="noopener noreferrer">data processing pipeline and CLI tool</a> for handling experimental data recorded in the <a href="https://beneuro.ic.ac.uk" target="_blank" rel="noopener noreferrer">Be.Neuro Lab.</a>',
     ],
@@ -48,7 +48,7 @@ export const experiences = [
     company: 'Freelance for OptioPay GmbH',
     time: 'Jul 2022 - Nov 2022',
     title: 'Data Scientist',
-    location: '',
+    // location: '',
     description:
       '<ul><li>Analyzed financial transactions and improved business logic using the insights gained.</li><li>Gained experience with Go, CI/CD, and microservice architectures.</li></ul>',
   },
