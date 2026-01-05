@@ -1,3 +1,4 @@
+<!-- TODO: Add that neurotech companies can also reach out -->
 I'm a freelance research software engineer, computational neuroscientist, and data scientist based in Berlin, Germany.
 
 I recently completed my PhD at Imperial College London where I worked with <a href="https://beneuro.ic.ac.uk" target="_blank" rel="noopener noreferrer">Juan Álvaro Gallego</a>, and used data analysis and computational modeling to investigate how neural populations give rise to movement under uncertainty.
