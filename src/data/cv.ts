@@ -41,7 +41,7 @@ export const experiences = [
     title: 'Research Software Engineer',
     // location: 'London',
     highlights: [
-      'Kickstarted the development of a <a href="https://github.com/BeNeuroLab/beneuro_experimental_data_organization" target="_blank" rel="noopener noreferrer">data processing pipeline and CLI tool</a> for handling experimental data recorded in the <a href="https://beneuro.ic.ac.uk" target="_blank" rel="noopener noreferrer">Be.Neuro Lab.</a>',
+      'Kickstarted the development of a <a href="https://github.com/BeNeuroLab/beneuro_experimental_data_organization/tree/4539cad833147319af76da1e9f5c5bc903479aef" target="_blank" rel="noopener noreferrer">data processing pipeline and CLI tool</a> for handling experimental data recorded in the <a href="https://beneuro.ic.ac.uk" target="_blank" rel="noopener noreferrer">Be.Neuro Lab.</a>',
     ],
   },
   {
