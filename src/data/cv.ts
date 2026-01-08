@@ -37,7 +37,7 @@ export const experiences = [
   },
   {
     company: 'Contracted by the Be.Neuro Lab',
-    time: 'May 2023 - Dec 2023',
+    time: 'May 2023 - Apr 2024',
     title: 'Research Software Engineer',
     // location: 'London',
     highlights: [
