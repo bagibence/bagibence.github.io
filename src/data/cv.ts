@@ -1,12 +1,29 @@
 export const experiences = [
   {
+    company: 'Mackelab',
+    time: 'Jul 2026 - present',
+    title: 'Research Software Engineer',
+    description:
+      'Working on connectome-constrained models of the fruit fly visual system, the next generation of <a href="https://github.com/TuragaLab/flyvis" target="_blank" rel="noopener noreferrer">flyvis</a>.',
+  },
+  {
+    company:
+      'Freelance for <a href="https://www.simonsfoundation.org/neuroscience/simons-collaboration-on-ecological-neuroscience/" target="_blank" rel="noopener noreferrer">SCENE</a>',
+    time: 'Jun 2026 - present',
+    title: 'Research Software Engineer',
+    highlights: [
+      'Developing <a href="https://github.com/bagibence/pgam_jax" target="_blank" rel="noopener noreferrer">pgam_jax</a>, a JAX implementation of Poisson Generalized Additive Models (PGAM).',
+    ],
+  },
+  {
     company: 'Freelance for The Simons Foundation',
-    time: 'Feb 2025 - present',
+    time: 'Feb 2025 - Jun 2026',
     title: 'Research Software Engineer',
     // location: 'Berlin',
     description:
       'Migrated the optimization backend of <a href="https://github.com/flatironinstitute/nemos/" target="_blank" rel="noopener noreferrer">NeMoS</a> from JAXopt to Optimistix and Optax:',
     highlights: [
+      '<a href="https://github.com/flatironinstitute/nemos/pull/474" target="_blank" rel="noopener noreferrer">Switched the default backend to Optimistix and Optax and removed the vendored JAXopt.</a>',
       '<a href="https://github.com/flatironinstitute/nemos/pull/365" target="_blank" rel="noopener noreferrer">Designed a unified solver interface and provided adapters for various solver backends.</a>',
       '<a href="https://github.com/flatironinstitute/nemos/pull/444" target="_blank" rel="noopener noreferrer">Added support for objective functions with auxiliary variables.</a>',
       '<a href="https://github.com/flatironinstitute/nemos/pull/411" target="_blank" rel="noopener noreferrer">Ported FISTA and Nesterov\'s accelerated gradient.</a>',

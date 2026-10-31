@@ -13,17 +13,17 @@ let orderedPublications: Publication[] = [];
 
 const orderElement = <T extends { time: string }>(a: T, b: T) => {
   const presentValues = ['present', 'now', 'current', 'today'];
-  if (
-    presentValues.includes(
-      (a['time'] as string)?.split(' - ')[1]?.toLowerCase()
-    )
-  ) {
-    // If the date is 'present', it should be the first element
-    return -1;
+  const [startA, endA] = (a['time'] as string)?.split(' - ') ?? [];
+  const [startB, endB] = (b['time'] as string)?.split(' - ') ?? [];
+  const aOngoing = presentValues.includes(endA?.toLowerCase());
+  const bOngoing = presentValues.includes(endB?.toLowerCase());
+  // Ongoing entries come first; among them, the most recently started first
+  if (aOngoing && bOngoing) {
+    return new Date(startB).getTime() - new Date(startA).getTime();
   }
-  const dateA = new Date((a['time'] as string)?.split(' - ')[1]);
-  const dateB = new Date((b['time'] as string)?.split(' - ')[1]);
-  return dateB.getTime() - dateA.getTime();
+  if (aOngoing) return -1;
+  if (bOngoing) return 1;
+  return new Date(endB).getTime() - new Date(endA).getTime();
 };
 
 if (experiences.length > 0) {
