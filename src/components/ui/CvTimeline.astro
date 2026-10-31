@@ -34,7 +34,9 @@ const { elements, colored } = Astro.props;
                 {element.title}
                 <span class="text-base font-normal text-neutral-500">
                   {' | '}
-                  {`${element.company}${element.location ? `, ${element.location}` : ''}`}
+                  <Fragment
+                    set:html={`${element.company}${element.location ? `, ${element.location}` : ''}`}
+                  />
                 </span>
               </>
             ) : (
